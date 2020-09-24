@@ -1,5 +1,5 @@
 import sys, argparse
-from samplingAlgos import *
+from algosMAB import *
 
 parser = argparse.ArgumentParser(description='Process inputs to multi-armed bandit algorithms')
 parser.add_argument('--instance', help='Path to instance of file containing true mean of arms')
@@ -34,7 +34,7 @@ elif algo == 'thompson-sampling' or algo == 'thompson-sampling-with-hint':
     answer = thompson_sampling(true_mean, horizon, seed)
 
 
-output_string = str(file_path) + ', ' + str(algo) + ', ' + str(seed) + ', ' + str(eps) + ', ' + str(horizon) + ', ' + str(answer) + '\n'
+output_string = str(file_path) + ', ' + str(algo) + ', ' + str(seed) + ', ' + str(eps) + ', ' + str(horizon) + ', ' + str(answer)
 print(output_string)
 
 
